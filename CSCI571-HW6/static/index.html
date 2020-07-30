@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Index </title>
+        <script src='/static/script.js'>  </script> 
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+
+    </head>
+<body onload = "fetchHeadlines()">
+  <table id = "buttons">
+    <tr>
+        <td> 
+            <button id = "news" onclick = "fetchHeadlines()">Google News</button> 
+            <button id = "search" onclick="displaySearchDiv();">Search</button> 
+        
+        </td>
+
+    </tr>
+  </table>
+
+<div id  = "display">
+  <table  id = "table1" >
+    <tr >
+        <td > 
+           <div id ="carousel">
+              
+           </div>
+        </td>
+        <td >  
+            <div id ="wordcloud">
+               
+            </div>
+         
+         </td>
+    </tr>
+</table>
+
+<div class = "cnn">
+    <p> CNN </p>
+    <hr>
+    <table class = "cnn-table">
+
+    </table>
+</div>
+
+<div class = "fox">
+    <p> Fox News </p>
+    <hr>
+    <table class = "fox-table">
+        
+    </table>
+</div>
+ 
+</div>
+
+<div id = "form-div" style = "display: none;">
+
+</div>
+<div id = "articles-div" style = "display:none">
+    
+</div>
+
+</body>
+
+</html>

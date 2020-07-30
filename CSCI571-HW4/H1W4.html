@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Homework 4</title>  
+<body >
+    <p style="font-weight: bold;font-size:1.3em;text-align: center;margin-top:200px;">
+        Enter URL for list of tallest buildings JSON File
+    </p>
+    <form id = "form" style="text-align: center;">
+        <input type="text" id="search">
+        <div style="margin-top: 10px;">
+            <button type="submit" onclick="loadJSON()" > Submit Query</button>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        var jsonDoc;        
+        function loadJSON () 
+        {
+            form = document.getElementById('form');
+            form.addEventListener("submit", function(event)
+            {
+                event.preventDefault(); 
+            });
+            var url = document.getElementById('search').value;
+            if(url == "")
+            {
+                window.alert("No JSON file entered. Please enter JSON file name");
+                return;
+            }
+            var xhttp=new XMLHttpRequest();
+            xhttp.overrideMimeType("application/json");
+            xhttp.open("GET",url,false); 
+            try
+            {
+                xhttp.send();
+            }
+            catch
+            {
+                window.alert("JSON file not found");
+                return;
+            }
+            jsonDoc = JSON.parse(xhttp.responseText);
+            processJSON(jsonDoc);
+         }
+        
+         function processJSON(jsonDoc)
+         {
+           headers = jsonDoc["Mainline"]["Table"]["Header"]["Data"];
+           data = jsonDoc["Mainline"]["Table"]["Row"];
+           if(data==null || data == "")
+            {
+                    window.alert("JSON file is empty");
+            }
+            else
+            {
+                dataKeys = Object.keys(data[0]);
+                newWindow = window.open('','Largest Manufacturers by Production (2017)','toolbar=0,location=0,menubar=0');
+                newWindow.document.write("<html><bo"+"dy><table id='table' border='1'>");
+                newWindow.document.write("<tr>");
+                for(i=0;i<headers.length;i++)
+                {
+                    newWindow.document.write("<th>");
+                    newWindow.document.write(headers[i]);
+                    newWindow.document.write("</th>");
+                }
+                newWindow.document.write("</tr>");    
+                for(i=0;i<data.length;i++)
+                {
+                    newWindow.document.write("<tr>");
+                    for(j=0;j<dataKeys.length;j++)
+                    {
+                            if(j==2)
+                            {
+                                newWindow.document.write("<td><ul>");
+                                hubsObject = data[i][dataKeys[j]];
+                                for(k=0;k<hubsObject["Hub"].length;k++)
+                                {
+                                    if(hubsObject["Hub"][k] != "")
+                                    {
+                                        if(k==0)
+                                        {
+                                            newWindow.document.write("<li style='font-weight:bold'>"+hubsObject["Hub"][k]+"</li>");
+                                        }
+                                        else
+                                        {
+                                            newWindow.document.write("<li>"+hubsObject["Hub"][k]+"</li>");
+                                        }
+                                    }
+                                }
+                                newWindow.document.write("</ul></td>");
+                            }
+                            else if(j==4)
+                            {
+                                newWindow.document.write("<td><a href='"+data[i][dataKeys[j]]+"'>"+data[i][dataKeys[j]]+"</a></td>");
+                            }
+                            else if(j==5)
+                            {
+                                newWindow.document.write("<td><img src='"+data[i][dataKeys[j]]+"'style='width:200px;height:200px;border:0'></img></td>");
+                            }
+                            else
+                            {
+                                newWindow.document.write("<td><p>"+data[i][dataKeys[j]]+"</p></td>");
+                            }
+                    }
+                    newWindow.document.write("</tr>");
+                }
+                newWindow.document.write("</table></body></html>");
+            }
+        }
+    </script>
+</body>
+</html>

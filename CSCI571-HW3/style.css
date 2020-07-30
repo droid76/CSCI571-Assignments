@@ -1,0 +1,124 @@
+.banner
+{
+    height: 120px;
+    width: 600px;
+    border-style: solid;
+    border-width:thin;
+    margin: 0 auto;
+    margin-top:40px;
+}
+
+.name
+{
+    text-align: center;
+    vertical-align: middle;
+    margin-top:20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:45px;
+
+}
+
+.navigation-ul
+{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.navigation-list
+{
+    justify-content: space-around;
+    margin-top: -35px;
+ 
+}
+
+.navigation-ul li 
+{
+    display: inline-block;
+    margin-left:20px;
+    font-style:italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:grey;
+    font-size:80%;
+
+}
+
+.navigation-ul li > a.home-link
+{
+    text-decoration: none;
+    color:black;
+}
+
+.navigation-ul li > a.nature-link
+{
+    text-decoration: none;
+    color:black;
+}
+
+a:link
+{
+    text-decoration: none;
+    color:grey;
+} 
+
+ a:visited
+{
+    text-decoration: none;
+    color:grey;
+} 
+
+
+.images img 
+{
+    width: 350px;
+    height:350px;  
+    object-fit: cover; 
+}
+
+.images td
+{
+    padding-bottom:-10px
+}
+
+.copyright
+{
+    font-style:italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 25px;
+}
+
+.images
+{
+    margin:0 auto;
+    margin-top: 65px;
+    border-spacing: 5px 0;
+}
+
+.social-media img 
+{
+    width: 20px;
+    height:20px;
+    padding:9px;   
+}
+
+.social-media
+{
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.nature
+{
+    margin-left:-50px;
+    margin-top: 55px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:22px;
+}
+
+.outer-div
+{
+    width:712px;
+    margin: auto;
+    min-width: 705px;
+}

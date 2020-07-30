@@ -1,0 +1,361 @@
+*
+{
+    font-family:Georgia;
+}
+
+#buttons
+{
+    margin-left:220px;
+}
+
+
+#display
+{
+    margin-left: 365px;
+    margin-top: -105px;
+}
+
+#wordcloud
+{
+    background-color: rgb(220, 220, 220);
+    margin-left:20px;
+}
+
+#carousel
+{
+    margin-left:30px;
+    height:300px;
+    cursor: pointer;
+}
+
+.cnn
+{
+    padding-top: 25px;
+    margin-top: -20px;
+    margin-left:-10px;
+}
+
+.fox
+{
+    padding-top: 25px;
+    margin-left:-10px;
+}
+
+.cnn hr
+{
+    margin-top: -20px;
+    margin-left: 0px;
+    width:890px;
+    border-top:2px dotted;
+}
+
+.fox hr
+{
+    margin-top: -20px;
+    margin-left: 0px;
+    width:890px;
+    border-top:2px dotted;
+}
+
+.cnn p
+{
+    font-weight: bold;
+    font-size: 26px;
+    font-family: "Georgia",  serif;
+    margin-left: 400px;
+}
+
+.fox p
+{
+    font-weight: bold;
+    font-size: 26px;
+    font-family: "Georgia",  serif;
+    margin-left: 400px;
+}
+
+.cnn-table
+{
+    border-spacing: 2px;
+}
+
+.cnn-table .news-card
+{
+    border: 1px solid darkgrey;
+    height: 370px;
+    border-radius: 2px;
+	width: 215px;
+	background-color: rgb(220, 220, 220);
+	cursor: pointer;
+}
+
+.fox-table
+{
+    border-spacing: 2px;
+}
+
+.fox-table .news-card
+{
+    border: 1px solid darkgrey;
+    height:370px;
+    border-radius: 2px;
+	width: 215px;
+	background-color: rgb(220, 220, 220);
+	cursor: pointer;
+}
+
+#news
+{
+    width:150px;
+    height:50px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    margin: 4px 2px;
+    margin-top:20px;
+    border: 1px solid black;
+    border-radius:3px;
+    background-color: rgb(220, 220, 220);
+    cursor: pointer;
+    
+}
+
+#search
+{
+    width:150px;
+    height:50px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    margin: 4px 2px;
+    margin-top:-10px;
+    border: 1px solid black;
+    border-radius:3px;
+    background-color: rgb(220, 220, 220);
+    cursor: pointer;
+}
+
+button:active
+{
+    background-color: #555555;
+    color: white;
+}
+
+button:focus 
+{
+    background-color: #555555;
+    color: white;
+}
+
+#news:hover , #search:hover
+{
+    background-color: green;
+    color: white;
+}
+
+
+
+  .content-div
+  {
+      background-color: rgba(0,0,0,0.55);
+      position: relative;
+      height:120px;
+      width:450px;
+      text-align:center;
+      color:white;
+      z-index: 1;
+      bottom: 120px;
+
+  }
+
+  #form-div
+  {
+    background-color: rgb(220, 220, 220);
+    margin-left: 450px;
+    margin-top: -100px;
+    width: 700px;
+    height:160px;
+ 
+  }
+  #keyword
+  {
+      border:solid 1px red;
+  }
+
+  
+.row1
+{
+    position: relative;
+    top:20px;
+    left:20px;
+} 
+
+#keyword
+{
+    position: relative;
+    left: 10px;
+}
+#fromLabel
+{
+    position: relative;
+    left:30px;
+}
+
+#from
+{
+    position: relative;
+    left:40px;
+}
+#toLabel
+{
+    position: relative;
+    left:50px;
+}
+
+
+#to
+{
+    position: relative;
+    left:60px;
+}
+
+
+#categoryLabel
+{
+    position: relative;
+    left:110px;
+}
+
+#category
+{
+    position: relative;
+    left:120px;
+}
+
+#sourceLabel
+{
+    position: relative;
+    left:140px;
+}
+
+#source
+{
+    position: relative;
+    left:150px;
+    min-width:130px;
+    max-width: 130px;
+}
+
+#searchButton
+{
+    position: relative;
+    left:140px;
+    width:80px;
+    height:25px;
+    border:none;
+    cursor: pointer;
+}
+
+#searchButton:hover
+{
+  background-color:green;
+  color:white;
+}
+
+#reset
+{
+    position: relative;
+    left:160px;
+    width:80px;
+    height:25px;
+    border:none;
+    cursor: pointer;
+}
+
+#reset:hover
+{
+    background-color:green;
+    color:white;
+}
+
+.row2
+{
+    position: relative;
+    margin-top:50px;
+    left:50px;
+} 
+
+.row3
+{
+    position: relative;
+    margin-top:30px;
+    left:100px;
+} 
+
+#articles-div
+{
+    margin-top:30px;
+    margin-left: 480px;
+}
+
+.article
+{
+    border: 1px solid black;
+	border-radius: 8px;
+	width: 640px;
+	background-color: rgb(220, 220, 220);
+	cursor: pointer;
+}
+
+.expandedArticle
+{
+    border: 1px solid black;
+	border-radius: 8px;
+    width: 640px;
+	background-color: rgb(220, 220, 220);
+	cursor: pointer;
+}
+
+.article:hover
+{
+    box-shadow: 0px 0px 25px #333;
+}
+
+.expandedArticle:hover
+{
+    box-shadow: 0px 0px 25px #333;
+}
+
+  .asterix
+  {
+      color:red;
+  }
+
+  #showMore , #showLess
+  {
+    margin-left: 270px;
+  }
+  #showMore:hover , #showLess:hover
+  {
+    background-color: green;
+    color: white;
+  }
+
+  #contentDiv
+  {
+      position: relative;
+    top:10px;
+      left:10px;
+      width:610px;
+  }
+
+  #expandedContentDiv
+  {
+      position: relative;
+    top:-15px;
+      left:10px;
+      width:610px;
+  }
